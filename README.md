@@ -39,7 +39,7 @@ You can also specify `:username` and `:password` if you'd like.
 Now for getting track information:
 
 ```ruby
-track = drop.get_track(url) #=> Sounddrop::Track
+track = drop.get_track('https://soundcloud.com/armadacaptivating/id-everytime-you-smile') #=> Sounddrop::Track
 ```
 
 Let's get some useful data:
