@@ -42,11 +42,13 @@ Now for getting track information:
 track = drop.get_track(url) #=> Sounddrop::Track
 ```
 
+Let's get some useful data:
+
 ```ruby
-id = track.id
-title = track.title
-genre = track.genre
-media_url = track.media_url
+id = track.id #=> Gets the track id
+title = track.title #=> Gets the track title
+genre = track.genre #=> Gets the track genre
+media_url = track.media_url #=> Gets the track download URL
 ```
 
 ## Contributing
