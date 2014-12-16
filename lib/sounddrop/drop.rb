@@ -1,5 +1,5 @@
 module Sounddrop
-  class Track
+  class Drop
 
     ###########################################################################
     #                                  Setup                                  #
@@ -11,6 +11,10 @@ module Sounddrop
       @TRACK  = track_hash
       @CLIENT = client
     end
+
+    ###########################################################################
+    #                                  Core                                   #
+    ###########################################################################
 
     # Track id
     def id
@@ -37,5 +41,5 @@ module Sounddrop
       end
     end
 
-  end # class Track
+  end # class Drop
 end # module Sounddrop

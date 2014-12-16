@@ -1,5 +1,5 @@
 module Sounddrop
-  class Drop
+  class Client
 
     ###########################################################################
     #                                  Setup                                  #
@@ -43,12 +43,12 @@ module Sounddrop
 
     # Returns a Track object with all sorts of useful data with useful getters.
     # The Track object is where most of the data retrieval occurs.
-    def get_track(url)
+    def get_drop(url)
       sc_track = client.get('/resolve', url: url)
-      Sounddrop::Track.new(sc_track, client)
+      Sounddrop::Drop.new(sc_track, client)
     end
 
     private :get_client, :username?, :password?
 
-  end # class Drop
+  end # class Client
 end # module Sounddrop

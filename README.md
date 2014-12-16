@@ -25,13 +25,13 @@ Being that we're only considering crude track information, there really is no ne
 
 How to get said keys? Easy! Head over to the [Soundcloud developers site] (developers.soundcloud.com) and register your application!
 
-Everything is done via a `Drop` and `Track` object.
+Everything is accessed via a `Drop` object.
 
 ```ruby
-drop = Sounddrop::Drop.new(
+client = Sounddrop::Client.new(
   client_id: CLIENT_ID,
   client_secret: CLIENT_SECRET
-  ) #=> Sounddrop::Drop
+  ) #=> Sounddrop::Client
 ```
 
 You can also specify `:username` and `:password` if you'd like.
@@ -39,16 +39,16 @@ You can also specify `:username` and `:password` if you'd like.
 Now for getting track information:
 
 ```ruby
-track = drop.get_track('https://soundcloud.com/armadacaptivating/id-everytime-you-smile') #=> Sounddrop::Track
+drop = client.get_drop('https://soundcloud.com/armadacaptivating/id-everytime-you-smile') #=> Sounddrop::Drop
 ```
 
 Let's get some useful data:
 
 ```ruby
-id = track.id #=> Gets the track id
-title = track.title #=> Gets the track title
-genre = track.genre #=> Gets the track genre
-media_url = track.media_url #=> Gets the track download URL
+id = drop.id #=> Gets the track id
+title = drop.title #=> Gets the track title
+genre = drop.genre #=> Gets the track genre
+media_url = drop.media_url #=> Gets the track download URL
 ```
 
 ## Contributing
