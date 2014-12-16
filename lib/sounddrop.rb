@@ -1,0 +1,6 @@
+require 'soundcloud'
+require 'logbert'
+require 'sounddrop/version'
+require 'sounddrop/exceptions'
+require 'sounddrop/track'
+require 'sounddrop/core'
