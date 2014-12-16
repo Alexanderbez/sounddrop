@@ -1,4 +1,5 @@
 # Sounddrop
+[![Gem Version](https://badge.fury.io/rb/sounddrop.svg)](http://badge.fury.io/rb/sounddrop)
 
 A gem that provides audio and track information about a [Soundcloud](https://soundcloud.com/) song given a URL.
 
@@ -24,7 +25,7 @@ Being that we're only considering crude track information, there really is no ne
 
 How to get said keys? Easy! Head over to the [Soundcloud developers site] (developers.soundcloud.com) and register your application!
 
-Everything is done via a `Drop` object.
+Everything is done via a `Drop` and `Track` object.
 
 ```ruby
 drop = Sounddrop::Drop.new(

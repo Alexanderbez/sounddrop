@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Alex Bezobchuk']
   spec.email         = ['abezobchuk@gmail.com']
 
-  spec.summary       = %q{Provides audio and track information about a soundcloud song given a URL}
-  spec.description   = %q{A gem that provides audio and track information about a soundcloud song given a URL}
+  spec.summary       = %q{Provides audio and track information about a Soundcloud song given a URL}
+  spec.description   = %q{A gem that provides audio and track information about a Soundcloud song given a URL}
   spec.homepage      = 'https://github.com/Alexanderbez/sounddrop'
   spec.license       = 'MIT'
 
