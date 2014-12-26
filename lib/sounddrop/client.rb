@@ -1,4 +1,4 @@
-module Sounddrop
+module SoundDrop
   class Client
 
     ###########################################################################
@@ -15,6 +15,10 @@ module Sounddrop
       @PASSWORD      = opts.fetch(:password, nil)
       @client        = get_client
     end
+
+    ###########################################################################
+    #                                  Core                                   #
+    ###########################################################################
 
     # Did the user specify a username?
     def username?
@@ -41,14 +45,13 @@ module Sounddrop
       Soundcloud.new(init_opts)
     end
 
-    # Returns a Track object with all sorts of useful data with useful getters.
-    # The Track object is where most of the data retrieval occurs.
+    # Returns a Drop object that contains useful track information.
     def get_drop(url)
       sc_track = client.get('/resolve', url: url)
-      Sounddrop::Drop.new(sc_track, client)
+      SoundDrop::Drop.new(client: client, track: sc_track)
     end
 
     private :get_client, :username?, :password?
 
   end # class Client
-end # module Sounddrop
+end # module SoundDrop

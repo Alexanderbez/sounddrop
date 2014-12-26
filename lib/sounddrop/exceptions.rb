@@ -1,11 +1,13 @@
-module Sounddrop::Exception
+module SoundDrop
+  module Exception
 
-  class FailedRequest < StandardError
-    attr_reader :message
+    class FailedRequest < StandardError
+      attr_reader :message
 
-    def initialize(message)
-      @message = message
+      def initialize(message)
+        @message = message
+      end
     end
-  end
 
-end # module Sounddrop::Exception
+  end # module Exception
+end # module SoundDrop

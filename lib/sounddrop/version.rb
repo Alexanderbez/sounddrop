@@ -1,3 +1,3 @@
-module Sounddrop
-  VERSION = "0.0.3"
+module SoundDrop
+  VERSION = "0.0.4"
 end

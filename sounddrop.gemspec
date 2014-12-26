@@ -5,7 +5,7 @@ require 'sounddrop/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'sounddrop'
-  spec.version       = Sounddrop::VERSION
+  spec.version       = SoundDrop::VERSION
   spec.authors       = ['Alex Bezobchuk']
   spec.email         = ['abezobchuk@gmail.com']
 

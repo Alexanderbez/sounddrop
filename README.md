@@ -1,7 +1,7 @@
-# Sounddrop
+# SoundDrop
 [![Gem Version](https://badge.fury.io/rb/sounddrop.svg)](http://badge.fury.io/rb/sounddrop)
 
-A gem that provides audio and track information about a [Soundcloud](https://soundcloud.com/) song given a URL.
+A gem that exposes various track information about a [Soundcloud](https://soundcloud.com/) song by providing a URL. This gem is very limited in comparison to the original [soundcloud API](https://github.com/soundcloud/soundcloud-ruby) gem and provides no real advantage other than getting a media download URL.
 
 ## Installation
 
@@ -21,17 +21,17 @@ Or install it yourself as:
 
 ## Usage
 
-Being that we're only considering crude track information, there really is no need to do any sort of authentication. All you really need is a `CLIENT_ID` and `CLIENT_SECRET`.
+Being that we're only considering crude track information, there really is no need to do any sort of user authentication. All you really need is a `CLIENT_ID` and `CLIENT_SECRET`.
 
 How to get said keys? Easy! Head over to the [Soundcloud developers site] (developers.soundcloud.com) and register your application!
 
-Everything is accessed via a `Drop` object.
+Everything is accessed via a `Drop` object which is created using a `Client` object.
 
 ```ruby
-client = Sounddrop::Client.new(
+client = SoundDrop::Client.new(
   client_id: CLIENT_ID,
   client_secret: CLIENT_SECRET
-  ) #=> Sounddrop::Client
+  ) #=> SoundDrop::Client
 ```
 
 You can also specify `:username` and `:password` if you'd like.
@@ -39,7 +39,8 @@ You can also specify `:username` and `:password` if you'd like.
 Now for getting track information:
 
 ```ruby
-drop = client.get_drop('https://soundcloud.com/armadacaptivating/id-everytime-you-smile') #=> Sounddrop::Drop
+track_url = 'https://soundcloud.com/armadacaptivating/id-everytime-you-smile'
+drop = client.get_drop(track_url) #=> SoundDrop::Drop
 ```
 
 Let's get some useful data:

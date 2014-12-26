@@ -1,4 +1,4 @@
-module Sounddrop
+module SoundDrop
   class Drop
 
     ###########################################################################
@@ -7,9 +7,9 @@ module Sounddrop
 
     LOG = Logbert[self]
 
-    def initialize(track_hash, client)
-      @TRACK  = track_hash
-      @CLIENT = client
+    def initialize(params)
+      @TRACK  = params[:track]
+      @CLIENT = params[:client]
     end
 
     ###########################################################################
@@ -37,9 +37,9 @@ module Sounddrop
         r = HTTParty.get("https://api.soundcloud.com/i1/tracks/#{id}/streams?client_id=#{@CLIENT.client_id}")
         r['http_mp3_128_url']
       rescue Exception => ex
-        raise Sounddrop::Exception::FailedRequest.new(ex)
+        raise SoundDrop::Exception::FailedRequest.new(ex)
       end
     end
 
   end # class Drop
-end # module Sounddrop
+end # module SoundDrop
